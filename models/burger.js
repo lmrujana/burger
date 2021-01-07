@@ -11,8 +11,8 @@ const burger = {
             cb(res);
         });
     },
-    updateOne: function(burguerId, cb){
-        orm.updateOne(burguerId, function(res){
+    updateOne: function(burgerId, cb){
+        orm.updateOne(burgerId, function(res){
             cb(res);
         });
     }
