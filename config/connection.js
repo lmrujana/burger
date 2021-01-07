@@ -6,7 +6,7 @@ const source = {
         port: 3306,
         user: 'root',
         password: 'myPassword123',
-        database: 'burguer_db'
+        database: 'burger_db'
     }
 };
 
