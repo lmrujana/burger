@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.get("/", function(req, res){
     burger.all(function(data){
+        // res.send(data);
         const hbsObject = {
             burgers: data
         }
@@ -12,13 +13,13 @@ router.get("/", function(req, res){
     });
 });
 
-router.post('/api/burger', function(req, res){
+router.post('/api/burgers', function(req, res){
     burger.insertOne(req.body.burgerName, function(results){
         res.json(results);
     });
 });
 
-router.put('/api/burger/:id', function(req, res){
+router.put('/api/burgers/:id', function(req, res){
     let burgerId = req.params.id;
 
     burger.updateOne(burgerId, function(results){

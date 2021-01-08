@@ -1,1 +1,24 @@
 <h1>Eat-Da-Burger!</h1>
+
+
+<ul>
+    {{#each burgers}}
+        {{#unless devoured}}
+            {{> burgers/burger-block }}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+            <li>{{id}}-{{burger_name}}</li>
+        {{/if}}
+    {{/each}}
+</ul>
+
+<form method="POST">
+    <label for="buger_name">New Burger:</label>
+    <br>
+    <textarea id="buger_name" name="buger_name" rows="5" cols="30" placeholder="Add a new Burger!"></textarea>
+</form>
