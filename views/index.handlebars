@@ -4,7 +4,7 @@
 <ul>
     {{#each burgers}}
         {{#unless devoured}}
-            {{> burgers/burger-block }}
+            {{> burgers/burger-block devourIt=true}}
         {{/unless}}
     {{/each}}
 </ul>
@@ -17,8 +17,9 @@
     {{/each}}
 </ul>
 
-<form method="POST">
-    <label for="buger_name">New Burger:</label>
+<form id="create-form" method="POST">
+    <label for="burger-name">New Burger:</label>
     <br>
-    <textarea id="buger_name" name="buger_name" rows="5" cols="30" placeholder="Add a new Burger!"></textarea>
+    <textarea id="burger-name" name="burger-name" rows="5" cols="30" placeholder="Add a new Burger!"></textarea>
+    <input type="submit">
 </form>
