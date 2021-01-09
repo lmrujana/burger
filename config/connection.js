@@ -1,4 +1,5 @@
 const mysql = require('mysql');
+let connection; 
 
 const source = {
     localhost: {
@@ -10,7 +11,11 @@ const source = {
     }
 };
 
-const connection = mysql.createConnection(source.localhost);
+if(process.env.JAWSDB_URL){
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+    connection = mysql.createConnection(source.localhost);
+};
 
 connection.connect(function(err){
     if(err){
