@@ -1,25 +1,43 @@
-<h1>Eat-Da-Burger!</h1>
+<h1 class="p-2 text-center">Eat-Da-Burger!</h1>
 
-
-<ul>
-    {{#each burgers}}
-        {{#unless devoured}}
-            {{> burgers/burger-block devourIt=true}}
-        {{/unless}}
-    {{/each}}
-</ul>
-
-<ul>
-    {{#each burgers}}
-        {{#if devoured}}
-            <li>{{id}}-{{burger_name}}</li>
-        {{/if}}
-    {{/each}}
-</ul>
-
-<form id="create-form" method="POST">
-    <label for="burger-name">New Burger:</label>
-    <br>
-    <textarea id="burger-name" name="burger-name" rows="5" cols="30" placeholder="Add a new Burger!"></textarea>
-    <input type="submit">
-</form>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <img src="/assets/img/burger.png">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-6">
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block2}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form id="create-form" method="POST">
+                <div class="mb-3 text-center">
+                    <label for="burger-name" class="form-label">New Burger:</label>
+                    <br>
+                    <textarea id="burger-name" name="burger-name" rows="5" cols="30"
+                        placeholder="Add a new Burger!"></textarea>
+                    <br>
+                    <input type="submit" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
