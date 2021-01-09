@@ -14,7 +14,7 @@
 
   A full-stack app that allows users to save burgers into a data base. Then they can choose to eat them, which moves the burgers to the 'Eaten' side of the page. This app uses node.js, express, express-handlebars and  mysql.
 
-  ![Eat-Da-Burger Screenshot](./public/assets/img/buger_screenshot.png)
+  ![Eat-Da-Burger Screenshot](public/assets/img/burger_screenshot.png)
 
   ## Installation
   Run "npm install" in the terminal, insidethe app directory.
