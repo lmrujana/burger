@@ -33,6 +33,7 @@
   NA
 
   ## Questions
-  If you have any questions regarding this application, please contact me at:  
+  If you have any questions regarding this application or want to check my other projects, please contact me at:
+  [Portfolio](https://lmrujana.github.io/responsive_portfolio/portfolio.html)  
   [GitHub Page](https://github.com/lmrujana)  
   Email: lmrujanass@gmail.com
