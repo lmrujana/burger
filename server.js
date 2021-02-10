@@ -1,4 +1,5 @@
 const express = require('express');
+const compression = require('compression');
 
 const PORT = process.env.PORT || 3000;
 
@@ -20,6 +21,7 @@ app.set("view engine", "handlebars");
 const router = require('./controllers/burger_controller');
 
 app.use(router);
+app.use(compression);
 
 app.listen(PORT, function(){
     console.log(`App now listening at localhost: ${PORT}`)
